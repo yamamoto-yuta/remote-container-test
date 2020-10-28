@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  latest:
+    build: .
+    image: template/python/base
+    container_name: template_python_base
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - 8888:8888
+    volumes:
+      - ./:/home/
+    tty: true
